@@ -1,0 +1,6 @@
+# Example autostart file
+
+# Set background color.
+swaybg -i ~/Pictures/wallpaper/202.jpg -m fill
+
+yambar
