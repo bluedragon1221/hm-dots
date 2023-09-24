@@ -1,3 +1,0 @@
-[submodule "nvim/nvim-config"]
-	path = nvim/nvim-config
-	url = https://github.com/bluedragon1221/nvim-config
