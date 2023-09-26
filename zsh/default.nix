@@ -10,6 +10,7 @@
 
   programs.zsh = {
     enable = true;
+
     shellAliases = {
       grep = "grep --color=auto";
       yay = "yay --sudo doas --noconfirm";
