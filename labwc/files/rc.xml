@@ -116,10 +116,10 @@
     <repeatRate>25</repeatRate>
     <repeatDelay>600</repeatDelay>
     <keybind key="W-x">
-      <action name="Execute" command="nixGLIntel kitty" />
+      <action name="Execute" command="nixGL kitty" />
     </keybind>
     <keybind key="W-b">
-      <action name="Execute" command="firefox" />
+      <action name="Execute" command="nixGL firefox" />
     </keybind>
     <keybind key="W-e">
       <action name="Execute" command="neovide" />
