@@ -21,4 +21,9 @@
     source = ./files;
     recursive = true;
   };
+
+  home.file."${config.xdg.dataHome}/themes/Onedark" = {
+    source = ./themes/Onedark;
+    recursive = true;
+  };
 }
