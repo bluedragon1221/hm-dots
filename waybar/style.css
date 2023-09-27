@@ -1,0 +1,154 @@
+/* custom colors */
+@define-color bg          #282c34;
+@define-color bg_bright   #2f343f;
+@define-color bg_brighter #434c5e;
+@define-color fg          #e5e9f0;
+@define-color red         #bf616a;
+@define-color green       #a3be8c;
+@define-color yellow      #ebcb8b;
+@define-color blue        #81a1c1;
+@define-color purple      #d3869b;
+@define-color aqua        #8fbcbb;
+@define-color orange      #d08770;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka Nerd Font";
+    font-size: 10pt;
+    transition: none;
+    margin: 0 0.3em 0 0.3em;
+    min-height: 0;
+}
+
+.warning, .critical, .urgent {
+    animation-name: blink_red;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window > box {
+    margin: 0;
+    padding: 6px 0 6px 0;
+    background-color: @bg;
+}
+
+#tags {
+    background: @bg_bright;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+
+#tags button {
+    margin: 3px;
+    color: @fg;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#tags button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @bg_brighter;
+    border: @bg_bright;
+}
+
+#tags button.occupied {
+    color: @blue;
+    /* nothing */
+}
+
+#tags button.focused {
+    color: @aqua;
+    background-color: @bg_brighter;
+}
+
+#mode, #clock, #calendar, #disk, #memory, #temperature, #cpu, #temperature, #backlight, #network, #battery, #custom-weather, #mpd, #custom-pipewire, #custom-pacman {
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
+    background: @bg_bright;
+}
+
+#mode:hover #clock:hover #calendar:hover #disk:hover #memory:hover #temperature:hover #cpu:hover #temperature:hover #backlight:hover #network:hover #battery:hover #custom-weather:hover #mpd:hover #custom-pipewire:hover #custom-pacman {
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
+    background: @bg_brighter;
+}
+
+#window {
+    font-size: 13pt;
+    color: @fg;
+}
+
+#network {
+    color: @green;
+}
+
+#memory {
+    color: @yellow;
+}
+
+#custom-weather {
+    color: @green_dark;
+}
+
+#network.upload {
+    color: @red;
+}
+
+#temperature {
+    color: @blue;
+}
+
+#custom-pipewire {
+    color: @blue_dark;
+}
+
+#custom-pacman {
+    color: @red;
+}
+
+#battery.full {
+color: @green;
+}
+
+#battery.charging, #battery.discharging {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
+
+#backlight {
+    color: @orange_dark;
+}
+
+#disk {
+    color: @aqua;
+}
+
+#cpu {
+    color: @aqua_dark;
+}
+
+#clock {
+    margin-right: 6px;
+    color: @orange;
+}
+
+#calendar {
+	color: @red;
+}
+
+#tray {
+    margin-right: 10px;
+}
