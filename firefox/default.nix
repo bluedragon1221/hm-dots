@@ -9,12 +9,7 @@ let
 in {
   # Custom Firefox Theme
   home.file.".mozilla/firefox/collin/chrome" = {
-    source = pkgs.fetchFromGitHub {
-      owner = "Godiesc";
-      repo = "firefox-one";
-      rev = "main";
-      sha256 = "2EuZ3X3p9m/mRaTR5LEbJBnj1VlE6BGCXs3imL3BUSA=";
-    } + "/chrome";
+    source = ./files;
     recursive = true;
   };
 
