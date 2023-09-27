@@ -20,7 +20,6 @@
       c = "clear";
       e = "nvim";
     };
-
     autocd = true;
     enableAutosuggestions = true;
     enableVteIntegration = true;
@@ -32,17 +31,17 @@
     };
 
     dirHashes = {
-      doc = "~/Documents";
-      vid = "~/Videos";
-      dl = "~/Downloads";
+      doc = "${config.home.homeDirectory}/Documents";
+      vid = "${config.home.homeDirectory}/Videos";
+      dl = "${config.home.homeDirectory}/Downloads";
 
-      cfg = "~/.config";
-      hm = "~cfg/home-manager";
-      nvim = "~cfg/nvim";
+      cfg = "${config.home.homeDirectory}/.config";
+      hm = "${config.home.homeDirectory}/.config/home-manager";
+      nvim = "${config.home.homeDirectory}/.config/nvim";
 
-      p = "~/projects";
-      py = "~p/learning_python";
-      r = "~p/ROBOTICS";
+      p = "${config.home.homeDirectory}/projects";
+      py = "${config.home.homeDirectory}/projects/learning_python";
+      r = "${config.home.homeDirectory}/projects/ROBOTICS";
     };
     initExtra = (builtins.readFile ./initExtra.zsh);
   };
@@ -75,22 +74,21 @@
 	stashed = "≡";
       };
       directory = {
-	format = "[$path](underline)";
+	format = "[$path]()";
 	truncation_length = 5;
 	truncate_to_repo = false;
 	home_symbol = "~";
 	substitutions = {
-	  "~/Documents" = "~doc";
-	  "~/Videos" = "~vid";
-	  "~/Downloads" = "~dl";
+	  "~/Documents" = "󱔘 ";
+	  "~/Videos" = " ";
+	  "~/Downloads" = " ";
 
-	  "~/.config" = "~cfg";
-	  "~cfg/home-manager" = "~hm";
-	  "~cfg/nvim" = "~nvim";
+	  "~/.config" = " ";
+	  "home-manager" = "hm";
 
-	  "~/projects" = "~p";
-	  "~p/learning_python" = "~py";
-	  "~p/ROBOTICS" = "~r";
+	  "~/projects" = "󰉋 ";
+	  "~p/learning_python" = " ";
+	  "~p/ROBOTICS" = "󱨚 ";
 	};
       };
     };
