@@ -16,6 +16,7 @@
     aliases = {
       sb = "status -sb";
       unstage = "restore --staged";
+      stage = "add";
     };
   };
 }
