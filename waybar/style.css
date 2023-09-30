@@ -39,47 +39,45 @@ window > box {
     background-color: @bg;
 }
 
-#tags {
+/* WORKSPACES */
+
+#workspaces {
     background: @bg_bright;
-    margin-left: 3px;
     border-radius: 5px;
 }
 
-#tags button {
+#workspaces button {
     margin: 3px;
     color: @fg;
     padding: 5px;
     border-radius: 3px;
 }
 
-#tags button:hover {
+#workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
     background: @bg_brighter;
     border: @bg_bright;
 }
 
-#tags button.occupied {
+#workspaces button.visible {
     color: @blue;
     /* nothing */
 }
 
-#tags button.focused {
+#workspaces button.active {
     color: @aqua;
     background-color: @bg_brighter;
 }
 
-#mode, #clock, #calendar, #disk, #memory, #temperature, #cpu, #temperature, #backlight, #network, #battery, #custom-weather, #mpd, #custom-pipewire, #custom-pacman {
+#clock, #backlight, #network, #battery, #custom-pipewire, #custom-launcher {
     padding-left: 6px;
     padding-right: 6px;
     border-radius: 4px;
     background: @bg_bright;
 }
 
-#mode:hover #clock:hover #calendar:hover #disk:hover #memory:hover #temperature:hover #cpu:hover #temperature:hover #backlight:hover #network:hover #battery:hover #custom-weather:hover #mpd:hover #custom-pipewire:hover #custom-pacman {
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 4px;
+#clock:hover, #backlight:hover, #network:hover, #battery:hover, #custom-pipewire:hover, #custom-launcher:hover {
     background: @bg_brighter;
 }
 

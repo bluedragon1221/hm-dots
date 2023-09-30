@@ -11,6 +11,10 @@
 	height = 30;
 	modules-left = [
 	  "custom/launcher"
+	  "hyprland/workspaces"
+	];
+	modules-center = [
+	  "hyprland/window"
 	];
 	modules-right = [
 	  "network"
@@ -19,7 +23,8 @@
 	];
 	"custom/launcher" = {
 	  format = " ";
-	  on-click = "nixGL kitty";
+	  tooltip = false;
+	  on-click = "wofi --show drun";
 	};
 
 	"battery" = {
@@ -47,6 +52,19 @@
 	"clock" = {
 	    format = "  {:%I:%M, %b %d}";
 	    today-format = "<b>{}</b>";
+	};
+	"hyprland/workspaces" = {
+	  format = "{icon}";
+	  format-icons = {
+	    "1" = " ";
+	    "2" = " ";
+	    "3" = " ";
+	    "4" = " ";
+	    "5" = " ";
+	  };
+	  persistent-workspaces = {
+	    "*" = 5;
+	  };
 	};
       };
     };
