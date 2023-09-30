@@ -7,7 +7,6 @@
 
   home.sessionVariables = {
     # GET OUT OF MY $HOME!
-    XCURSOR_PATH = "/usr/share/icons:${config.xdg.dataHome}/icons";
     GOPATH = "${config.xdg.dataHome}/go";
     GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
     SQLITE_HISTORY = "/dev/null";
