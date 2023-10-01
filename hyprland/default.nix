@@ -1,9 +1,6 @@
 # vim: sw=2
-
-{ pkgs, ... }:
-
-{
-  home.packages = with pkgs; [ hyprland wbg ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [hyprland wbg];
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -58,17 +55,16 @@
           "workspaces, 1, 3, default, slide"
         ];
       };
-
     };
 
     extraConfig = ''
-      ${builtins.concatStringsSep "\n" (builtins.genList (x:
-        let ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
+      ${builtins.concatStringsSep "\n" (builtins.genList (x: let
+          ws = let c = (x + 1) / 10; in builtins.toString (x + 1 - (c * 10));
         in "  bind = $mod, ${ws}, workspace, ${
-            toString (x + 1)
-          }\n  bind = $mod SHIFT, ${ws}, movetoworkspace, ${
-            toString (x + 1)
-          }\n") 10)}
+          toString (x + 1)
+        }\n  bind = $mod SHIFT, ${ws}, movetoworkspace, ${
+          toString (x + 1)
+        }\n") 10)}
     '';
   };
 }

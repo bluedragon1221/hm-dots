@@ -1,8 +1,5 @@
 # vim: sw=2
-
-{ config, ... }:
-
-{
+{config, ...}: {
   xdg.enable = true;
 
   home.sessionVariables = {

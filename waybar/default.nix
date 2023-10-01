@@ -1,20 +1,17 @@
 # vim: sw=2
-
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.waybar = {
     enable = true;
     package = pkgs.waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
     });
     settings = {
       mainBar = {
         layer = "top";
         height = 30;
-        modules-left = [ "custom/launcher" "hyprland/workspaces" ];
-        modules-center = [ "hyprland/window" ];
-        modules-right = [ "network" "battery" "clock" ];
+        modules-left = ["custom/launcher" "hyprland/workspaces"];
+        modules-center = ["hyprland/window"];
+        modules-right = ["network" "battery" "clock"];
         "custom/launcher" = {
           format = "󱄅 ";
           tooltip = false;
@@ -25,7 +22,7 @@
           format = "{icon} {capacity}%";
           format-charging = "󰂄 {capacity}%";
           format-full = "{icon} {capacity}%";
-          format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰁹" ];
+          format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰁹"];
           tooltip = false;
           battery = {
             interval = 1;
@@ -57,11 +54,11 @@
             "5" = " ";
           };
           persistent-workspaces = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
-            "5" = [ ];
+            "1" = [];
+            "2" = [];
+            "3" = [];
+            "4" = [];
+            "5" = [];
           };
         };
       };

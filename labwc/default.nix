@@ -1,9 +1,10 @@
 # vim: sw=2
-
-{ config, pkgs, ... }:
-
 {
-  home.packages = with pkgs; [ labwc wayland ];
+  config,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs; [labwc wayland];
 
   home.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = 0;

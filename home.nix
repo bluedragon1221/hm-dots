@@ -1,6 +1,5 @@
 # vim: sw=2
-
-{ pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./xdg
     ./git
@@ -30,7 +29,7 @@
 
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "flakes" "nix-command" ];
+    settings.experimental-features = ["flakes" "nix-command"];
   };
 
   targets.genericLinux.enable = true;

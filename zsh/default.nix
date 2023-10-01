@@ -1,9 +1,11 @@
 # vim: sw=2
-
-{ config, pkgs, lib, ... }:
-
 {
-  home.packages = with pkgs; [ zsh fzf ];
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  home.packages = with pkgs; [zsh fzf];
 
   programs.zsh = {
     enable = true;
@@ -40,7 +42,7 @@
       py = "${config.home.homeDirectory}/projects/learning_python";
       r = "${config.home.homeDirectory}/projects/ROBOTICS";
     };
-    initExtra = (builtins.readFile ./initExtra.zsh);
+    initExtra = builtins.readFile ./initExtra.zsh;
   };
 
   programs.starship = {
@@ -60,8 +62,7 @@
       };
       git_branch.format = "[@$branch](underline)";
       git_status = {
-        format =
-          "[*$conflicted$untracked$modified$staged$renamed$deleted](218) ";
+        format = "[*$conflicted$untracked$modified$staged$renamed$deleted](218) ";
         style = "cyan";
         conflicted = "";
         untracked = "?";

@@ -1,8 +1,5 @@
 # vim: sw=2
-
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.kitty = {
     enable = true;
     font = {

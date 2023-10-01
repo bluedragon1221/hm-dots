@@ -1,8 +1,5 @@
 # vim: sw=2
-
-{ ... }:
-
-{
+{...}: {
   programs.wofi = {
     enable = true;
     settings = {
@@ -11,6 +8,6 @@
       mode = "drun";
       filter_rate = 100;
     };
-    style = (builtins.readFile ./style.css);
+    style = builtins.readFile ./style.css;
   };
 }
