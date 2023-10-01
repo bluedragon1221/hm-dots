@@ -4,10 +4,13 @@
   lib,
   ...
 }: let
-  nur = import (builtins.fetchTarball {
-    url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-    sha256 = "1aisirih9p9jpr3pzs5qdyddi49w0x6j5z7nk3xar3sn4qck4gim";
-  }) {inherit pkgs;};
+  nur =
+    import
+    (builtins.fetchTarball {
+      url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+      sha256 = "1aisirih9p9jpr3pzs5qdyddi49w0x6j5z7nk3xar3sn4qck4gim";
+    })
+    {inherit pkgs;};
 
   verticalTabs = true;
 in {

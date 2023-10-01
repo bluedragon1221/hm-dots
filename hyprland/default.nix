@@ -64,7 +64,8 @@
           toString (x + 1)
         }\n  bind = $mod SHIFT, ${ws}, movetoworkspace, ${
           toString (x + 1)
-        }\n") 10)}
+        }\n")
+      10)}
     '';
   };
 }

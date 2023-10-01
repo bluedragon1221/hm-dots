@@ -1,5 +1,5 @@
 # vim: sw=2
-{...}: {
+_: {
   programs.wofi = {
     enable = true;
     settings = {
