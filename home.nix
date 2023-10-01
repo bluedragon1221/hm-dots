@@ -2,7 +2,6 @@
 
 { pkgs, ... }: {
   imports = [
-    # ./home
     ./xdg
     ./git
 
@@ -11,11 +10,16 @@
     ./zsh
     ./hyprland
     ./kitty
-    # ./schizofox
     ./firefox
     ./waybar
-    # ./wofi
+    ./wofi
   ];
+
+  home = {
+    username = "collin";
+    homeDirectory = "/home/collin";
+    stateVersion = "23.05";
+  };
 
   programs.home-manager.enable = true;
 

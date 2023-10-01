@@ -1,6 +1,6 @@
 # vim: sw=2
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.kitty = {
