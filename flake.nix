@@ -20,7 +20,6 @@
     nixpkgs,
     home-manager,
     alejandra,
-    deadnix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -33,9 +32,9 @@
 
     formatter.${system} = [
       alejandra.defaultPackage.${system}
-      deadnix.defaultPackage.${system}
     ];
 
+    # "nix run ." will run home-manager switch
     defaultPackage.${system} = home-manager.defaultPackage.${system};
   };
 }
