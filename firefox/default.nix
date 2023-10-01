@@ -1,13 +1,13 @@
 # vim: sw=2
-{ config, pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let
   nur = import (builtins.fetchTarball {
     url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
     sha256 = "1aisirih9p9jpr3pzs5qdyddi49w0x6j5z7nk3xar3sn4qck4gim";
-  }) {
-      inherit pkgs;
-    };
+  }) { inherit pkgs; };
+
+  verticalTabs = true;
 in {
   # Custom Firefox Theme
   home.file.".mozilla/firefox/collin/chrome" = {
@@ -44,6 +44,7 @@ in {
 
     profiles.collin = {
       isDefault = true;
+
       extensions = with nur.repos.rycee.firefox-addons; [
         ublock-origin
         sponsorblock
@@ -51,7 +52,7 @@ in {
         df-youtube
         bitwarden
         side-view
-        tabcenter-reborn
+        (lib.mkIf verticalTabs tabcenter-reborn)
       ];
       settings = {
         # All UserChromes have you enable these
@@ -63,7 +64,7 @@ in {
         "general.smoothScroll" = true;
 
         # Custom firefox theme
-        "firefoxone.tree_tabs_style" = false;
+        "firefoxone.tree_tabs_style" = lib.mkIf verticalTabs true;
       };
       bookmarks = [
         {
