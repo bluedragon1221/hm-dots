@@ -3,12 +3,11 @@
   imports = [
     ./xdg
     ./git
+    ./term
 
     # Tools
     ./nvim
-    ./zsh
     ./hyprland
-    ./kitty
     ./firefox
     ./waybar
     ./wofi
@@ -29,7 +28,10 @@
 
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = ["flakes" "nix-command"];
+    settings = {
+      experimental-features = ["flakes" "nix-command"];
+      eval-cache = false;
+    };
   };
 
   targets.genericLinux.enable = true;
