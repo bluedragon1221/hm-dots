@@ -1,6 +1,6 @@
 # vim: sw=2
 {pkgs, ...}: {
-  home.packages = with pkgs; [hyprland wbg];
+  home.packages = with pkgs; [wbg];
 
   wayland.windowManager.hyprland = {
     enable = true;
