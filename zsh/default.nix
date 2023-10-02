@@ -83,11 +83,11 @@
           "~/Downloads" = " ";
 
           "~/.config" = " ";
-          "home-manager" = "hm";
+          " /home-manager" = " ";
 
           "~/projects" = "󰉋 ";
-          "~p/learning_python" = " ";
-          "~p/ROBOTICS" = "󱨚 ";
+          "󰉋 /learning_python" = " ";
+          "󰉋 /ROBOTICS" = "󱨚 ";
         };
       };
     };
