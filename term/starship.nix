@@ -20,11 +20,11 @@
         format = "[$conflicted$untracked$modified$staged$renamed$deleted](218) ";
         style = "cyan";
         conflicted = "";
-        untracked = "?";
-        modified = "M";
-        staged = "S";
+        untracked = "[?](yellow)";
+        modified = "[*](red bold)";
+        staged = "[+](green bold)";
         renamed = "";
-        deleted = "D";
+        deleted = "";
         stashed = "";
       };
       directory = {

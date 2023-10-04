@@ -4,10 +4,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./starship.nix
-  ];
-
   home.packages = with pkgs; [zsh fzf];
 
   programs.zsh = {
