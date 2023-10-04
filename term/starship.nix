@@ -7,8 +7,8 @@
       add_newline = false;
       format = lib.concatStrings [
         "$directory$git_branch"
-        " $git_status"
-        "$character"
+        "$git_status"
+        " $character"
       ];
       scan_timeout = 10;
       character = {
@@ -17,7 +17,7 @@
       };
       git_branch.format = "[@$branch](underline)";
       git_status = {
-        format = "[$conflicted$untracked$modified$staged$renamed$deleted](218) ";
+        format = " [$conflicted$untracked$modified$staged$renamed$deleted](218)";
         style = "cyan";
         conflicted = "";
         untracked = "[?](yellow)";
