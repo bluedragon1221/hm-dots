@@ -41,48 +41,41 @@ window > box {
 
 /* WORKSPACES */
 
-#workspaces {
-    background: @bg_bright;
-    border-radius: 5px;
-}
-
 #workspaces button {
-    margin: 3px;
+    margin: 0.25em;
     color: @fg;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 0.25em 0;
+    background-color: @bg_bright;
 }
 
-#workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background: @bg_brighter;
-    border: @bg_bright;
+#workspaces button.empty {
+    color: @bg_brighter;
 }
 
 #workspaces button.visible {
     color: @blue;
-    /* nothing */
 }
 
 #workspaces button.active {
     color: @aqua;
-    background-color: @bg_brighter;
 }
 
-#clock, #backlight, #network, #battery, #custom-pipewire, #custom-launcher {
-    padding-left: 6px;
-    padding-right: 6px;
+#custom-launcher {
+    padding: 0.25em 0.5em;
+    color: @blue;
+    font-size: 13pt;
+    background-color: @bg;
+}
+
+#clock, #network, #battery, #custom-pipewire, #workspaces {
+    /* padding-left: 6px;
+    padding-right: 6px; */
     border-radius: 4px;
     background: @bg_bright;
 }
 
-#clock:hover, #backlight:hover, #network:hover, #battery:hover, #custom-pipewire:hover, #custom-launcher:hover {
-    background: @bg_brighter;
-}
-
 #window {
-    font-size: 13pt;
+    font-size: 12pt;
     color: @fg;
 }
 
@@ -90,28 +83,8 @@ window > box {
     color: @green;
 }
 
-#memory {
-    color: @yellow;
-}
-
-#custom-weather {
-    color: @green_dark;
-}
-
-#network.upload {
-    color: @red;
-}
-
-#temperature {
-    color: @blue;
-}
-
 #custom-pipewire {
     color: @blue_dark;
-}
-
-#custom-pacman {
-    color: @red;
 }
 
 #battery.full {
@@ -126,27 +99,7 @@ color: @green;
     color: @red;
 }
 
-#backlight {
-    color: @orange_dark;
-}
-
-#disk {
-    color: @aqua;
-}
-
-#cpu {
-    color: @aqua_dark;
-}
-
 #clock {
     margin-right: 6px;
     color: @orange;
-}
-
-#calendar {
-	color: @red;
-}
-
-#tray {
-    margin-right: 10px;
 }

@@ -53,13 +53,7 @@
             "4" = " ";
             "5" = " ";
           };
-          persistent-workspaces = {
-            "1" = [];
-            "2" = [];
-            "3" = [];
-            "4" = [];
-            "5" = [];
-          };
+          persistent-workspaces = true;
         };
       };
     };
