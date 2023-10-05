@@ -36,7 +36,10 @@
         gaps_out = 8;
       };
 
-      gestures.workspace_swipe = true;
+      gestures = {
+	workspace_swipe = true;
+	workspace_swipe_forever = true;
+      };
 
       decoration = {
         rounding = 4;
