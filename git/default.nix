@@ -1,6 +1,5 @@
 # vim: sw=2
 {pkgs, ...}: {
-  home.packages = with pkgs; [pre-commit];
   programs.git = {
     enable = true;
     userName = "Collin Williams";
