@@ -17,6 +17,8 @@
       l = "ls";
       c = "clear";
       e = "nvim";
+      cat = "bat";
+
     };
     autocd = true;
     enableAutosuggestions = true;
@@ -42,5 +44,10 @@
       r = "${config.home.homeDirectory}/projects/ROBOTICS";
     };
     initExtra = builtins.readFile ./initExtra.zsh;
+  };
+
+  programs.bat = {
+    enable = true;
+    config.theme = "TwoDark";
   };
 }
