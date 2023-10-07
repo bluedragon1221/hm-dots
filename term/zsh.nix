@@ -30,18 +30,18 @@
       ignoreDups = true;
     };
 
-    dirHashes = {
-      doc = "${config.home.homeDirectory}/Documents";
-      vid = "${config.home.homeDirectory}/Videos";
-      dl = "${config.home.homeDirectory}/Downloads";
+    dirHashes = let HOME = config.home.homeDirectory; in {
+      doc = "${HOME}/Documents";
+      vid = "${HOME}/Videos";
+      dl = "${HOME}/Downloads";
 
-      cfg = "${config.home.homeDirectory}/.config";
-      hm = "${config.home.homeDirectory}/.config/home-manager";
-      nvim = "${config.home.homeDirectory}/.config/nvim";
+      cfg = "${HOME}/.config";
+      hm = "${HOME}/.config/home-manager";
+      nvim = "${HOME}/.config/nvim";
 
-      p = "${config.home.homeDirectory}/projects";
-      py = "${config.home.homeDirectory}/projects/learning_python";
-      r = "${config.home.homeDirectory}/projects/ROBOTICS";
+      p = "${HOME}/projects";
+      py = "${HOME}/projects/learning_python";
+      r = "${HOME}/projects/ROBOTICS";
     };
     initExtra = builtins.readFile ./initExtra.zsh;
   };
