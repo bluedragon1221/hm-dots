@@ -4,5 +4,5 @@ My new dotfiles, declared with [`home-manager`](https://nix-community.github.io/
 # How do I use this?
 - [Install Nix](https://nixos.org/download)
 - [Install Home Manager (Standalone)](https://nix-community.github.io/home-manager/index.html#sec-install-standalone)
-- `git clone https://bluedragon1221/hm-dots ~/.config/home-manager`
+- `git clone https://github.com/bluedragon1221/hm-dots ~/.config/home-manager`
 - `nix run . switch -- --impure` 
