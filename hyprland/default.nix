@@ -11,13 +11,13 @@
       monitor = ",prefered,auto,1";
 
       exec-once = [
-        "${pkgs.waybar}/bin/waybar &"
+        "sleep 10; ${pkgs.waybar}/bin/waybar &"
         "${pkgs.wbg}/bin/wbg ${./wallpaper.jpg}"
       ];
 
       bind = [
         "$mod, X, exec, ${pkgs.kitty}/bin/kitty"
-        "$mod, B, exec, firefox"
+        "$mod, B, exec, ${pkgs.firefox}/bin/firefox"
         "$mod, Q, killactive,"
         "$mod SHIFT, Q, exit"
         "$mod, space, exec, ${pkgs.wofi}/bin/wofi"
@@ -37,8 +37,8 @@
       };
 
       gestures = {
-	workspace_swipe = true;
-	workspace_swipe_forever = true;
+        workspace_swipe = true;
+        workspace_swipe_forever = true;
       };
 
       decoration = {
