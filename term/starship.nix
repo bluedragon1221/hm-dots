@@ -17,7 +17,7 @@
       };
       git_branch.format = "[@$branch](underline)";
       git_status = {
-        format = " [$conflicted$untracked$modified$staged$renamed$deleted](218)";
+        format = "[ $conflicted$untracked$modified$staged$renamed$deleted](218)";
         style = "cyan";
         conflicted = "";
         untracked = "[?](yellow)";
