@@ -18,7 +18,6 @@
       c = "clear";
       e = "nvim";
       cat = "bat";
-
     };
     autocd = true;
     enableAutosuggestions = true;
@@ -30,7 +29,9 @@
       ignoreDups = true;
     };
 
-    dirHashes = let HOME = config.home.homeDirectory; in {
+    dirHashes = let
+      HOME = config.home.homeDirectory;
+    in {
       doc = "${HOME}/Documents";
       vid = "${HOME}/Videos";
       dl = "${HOME}/Downloads";

@@ -1,5 +1,5 @@
 # vim: sw=2
-{pkgs, ...}: {
+_: {
   programs.git = {
     enable = true;
     userName = "Collin Williams";
