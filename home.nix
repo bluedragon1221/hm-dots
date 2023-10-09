@@ -12,7 +12,7 @@
     ./nvim
     ./firefox
     ./wofi
-
+    ./kitty
   ];
 
   home = {
