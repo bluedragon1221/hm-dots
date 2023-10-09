@@ -11,3 +11,7 @@ CARGO_HOME=$XDG_DATA_HOME/cargo
 co() {
     cd ../$1
 }
+
+loc() {
+    cat $1 | wc -l
+}
