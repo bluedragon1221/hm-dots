@@ -3,14 +3,16 @@
   imports = [
     ./xdg
     ./git
+    
+    # collections
     ./term
+    ./desktop
 
     # Tools
     ./nvim
-    ./hyprland
     ./firefox
-    ./waybar
     ./wofi
+
   ];
 
   home = {
