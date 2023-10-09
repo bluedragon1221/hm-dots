@@ -11,7 +11,6 @@
     # Tools
     ./nvim
     ./firefox
-    ./wofi
     ./kitty
   ];
 
