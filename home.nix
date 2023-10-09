@@ -9,7 +9,7 @@
     ./desktop
 
     # Tools
-    ./nvim
+    ./neovim
     ./firefox
     ./kitty
   ];

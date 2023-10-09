@@ -1,6 +1,6 @@
 # vim: sw=2
 {pkgs, ...}: {
-  home.packages = with pkgs; [neovim];
+  programs.neovim.enable = true; # installs neovim
   home.file.".config/nvim" = {
     source = ./files;
     recursive = true;
