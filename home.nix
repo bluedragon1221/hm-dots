@@ -3,7 +3,7 @@
   imports = [
     ./xdg
     ./git
-    
+
     # collections
     ./term
     ./desktop
