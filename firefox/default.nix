@@ -58,6 +58,7 @@ in {
         bitwarden
         side-view
         (lib.mkIf verticalTabs tabcenter-reborn)
+	markdownload
       ];
       settings = {
         # All UserChromes have you enable these
