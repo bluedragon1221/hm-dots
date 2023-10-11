@@ -43,6 +43,7 @@
 
       p = "${HOME}/projects";
       py = "${HOME}/projects/learning_python";
+      rs = "${HOME}/projects/rust";
       r = "${HOME}/projects/ROBOTICS";
     };
     initExtra = builtins.readFile ./initExtra.zsh;
@@ -94,6 +95,7 @@
 
           "~/projects" = "󰉋 ";
           "󰉋 /learning_python" = " ";
+          "󰉋 /rust" = " ";
           "󰉋 /ROBOTICS" = "󱨚 ";
         };
       };
