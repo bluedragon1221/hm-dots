@@ -5,7 +5,7 @@
   lib,
   ...
 }: {
-  home.packages = with pkgs; [zsh fzf];
+  home.packages = with pkgs; [zsh fzf fd tree neofetch];
 
   programs.zsh = {
     enable = true;
