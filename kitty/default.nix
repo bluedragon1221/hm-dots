@@ -1,8 +1,10 @@
 # vim: sw=2
 {pkgs, ...}: {
+  fonts.fontconfig.enable = true;
   programs.kitty = {
     enable = true;
     font = {
+      package = (pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; });
       name = "Iosevka Nerd Font";
       size = 14;
     };
