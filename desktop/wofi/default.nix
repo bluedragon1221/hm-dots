@@ -8,6 +8,6 @@ _: {
       mode = "drun";
       filter_rate = 100;
     };
-    style = builtins.readFile ./wofi.css;
+    style = builtins.readFile ./style.css;
   };
 }

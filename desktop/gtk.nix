@@ -10,5 +10,9 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+    theme = {
+      name = "Shades of Gray";
+      package = pkgs.shades-of-gray-theme;
+    };
   };
 }

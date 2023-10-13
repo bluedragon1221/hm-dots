@@ -58,6 +58,6 @@
       };
     };
 
-    style = ./waybar.css;
+    style = ./style.css;
   };
 }

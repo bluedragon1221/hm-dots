@@ -1,9 +1,9 @@
 # vim: sw=2
 _: {
   imports = [
-    ./hyprland.nix
-    ./waybar.nix
+    ./hyprland
+    ./waybar
     ./gtk.nix
-    ./wofi.nix
+    ./wofi
   ];
 }
