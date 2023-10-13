@@ -30,7 +30,7 @@ return {
 	    component_separators = { left = '', right = ''},
 	    section_separators = { left = '', right = ''},
 	    disabled_filetypes = {
-		statusline = {},
+		statusline = { 'text' },
 		winbar = {},
 	    },
 	    ignore_focus = {},
@@ -49,7 +49,11 @@ return {
 		    return toProjName(vim.api.nvim_buf_get_name(0))
 		end
 	    },
-	    lualine_c = {'%=', 'buffers'},
+	    lualine_c = {'%=', {
+		    'buffers',
+		    disabled_buftypes = { "Telescope" },
+		}
+	    },
 	    lualine_x = {'searchcount'},
 	    lualine_y = {'filetype'},
 	    lualine_z = {
