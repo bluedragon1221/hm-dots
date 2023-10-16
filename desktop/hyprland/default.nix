@@ -23,6 +23,13 @@
         "$mod, space, exec, ${pkgs.wofi}/bin/wofi"
         "$mod, L, exec, systemctl suspend"
         "$mod SHIFT, C, exec, systemctl hibernate"
+
+        ",XF86AudioRaiseVolume, exec, pamixer -i5"
+        ",XF86AudioLowerVolume, exec, pamixer -d5"
+
+        "$mod, grave, workspace, previous"
+
+        "$mod, f, fullscreen"
       ];
 
       bindm = [
