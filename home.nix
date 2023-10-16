@@ -23,11 +23,6 @@
 
   programs.home-manager.enable = true;
 
-  programs.zsh.shellAliases = {
-    hm = "home-manager";
-    hms = "home-manager switch";
-  };
-
   nix = {
     package = pkgs.nix;
     settings = {
