@@ -19,7 +19,9 @@
   in {
     homeConfigurations.collin = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      modules = [./home.nix];
+      modules = [
+        ./home.nix
+      ];
     };
 
     formatter.${system} = nix-formatter-pack.lib.mkFormatter {
