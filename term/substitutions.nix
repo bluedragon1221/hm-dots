@@ -1,13 +1,13 @@
 {
-	"~/Documents" = "󱔘 ";
-	"~/Videos" = " ";
-	"~/Downloads" = " ";
+  "~/Documents" = "󱔘 ";
+  "~/Videos" = " ";
+  "~/Downloads" = " ";
 
-	"~/.config" = " ";
-	" /home-manager" = " ";
+  "~/.config" = " ";
+  " /home-manager" = " ";
 
-	"~/projects" = "󰉋 ";
-	"󰉋 /learning_python" = " ";
-	"󰉋 /rust" = " ";
-	"󰉋 /ROBOTICS" = "󱨚 ";
+  "~/projects" = "󰉋 ";
+  "󰉋 /learning_python" = " ";
+  "󰉋 /rust" = " ";
+  "󰉋 /ROBOTICS" = "󱨚 ";
 }

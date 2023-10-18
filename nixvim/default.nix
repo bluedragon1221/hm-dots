@@ -1,9 +1,9 @@
 _: {
   imports = let
-    nixvim = import (builtins.fetchGit { url = "https://github.com/nix-community/nixvim"; });
+    nixvim = import (builtins.fetchGit {url = "https://github.com/nix-community/nixvim";});
   in [
-		nixvim.homeManagerModules.nixvim
-	];
+    nixvim.homeManagerModules.nixvim
+  ];
 
   programs.nixvim = {
     enable = true;
@@ -12,7 +12,7 @@ _: {
     plugins.nvim-cmp = import ./cmp.nix;
     plugins.noice = import ./noice.nix;
 
-		plugins.notify.enable = true;
+    plugins.notify.enable = true;
     plugins.barbecue.enable = true;
 
     colorschemes.onedark.enable = true;
@@ -25,9 +25,9 @@ _: {
       };
     };
 
-		plugins.nvim-autopairs = {
-			enable = true;
-		};
+    plugins.nvim-autopairs = {
+      enable = true;
+    };
 
     keymaps = [
       {

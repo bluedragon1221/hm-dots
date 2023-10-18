@@ -12,7 +12,7 @@
 
     shellAliases = import ./aliases.nix;
     dirHashes = import ./dirHashes.nix {inherit config;};
-		initExtra = builtins.readFile ./initExtra.zsh;
+    initExtra = builtins.readFile ./initExtra.zsh;
 
     autocd = true;
     enableAutosuggestions = true;
@@ -34,7 +34,7 @@
   programs.starship = {
     enable = true;
 
-		directory.substitutions = import ./substitutions.nix;
+    directory.substitutions = import ./substitutions.nix;
 
     enableZshIntegration = true;
     settings = {
