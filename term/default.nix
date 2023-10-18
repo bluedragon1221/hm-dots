@@ -55,6 +55,7 @@
         untracked = "[ ?](yellow)";
         modified = "[ *](red bold)";
         staged = "[ +](green bold)";
+        deleted = "[ x](red bold)";
       };
       directory = {
         format = "$path";
