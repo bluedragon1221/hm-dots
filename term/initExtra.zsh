@@ -15,3 +15,14 @@ co() {
 loc() {
     cat $1 | wc -l
 }
+
+take() {
+    if [[ -z "$1" ]]; then
+	cd $HOME
+    elif [[ -d "$1" ]]; then
+	cd "$1"
+    else
+	mkdir "$1"
+	cd "$1"
+    fi
+}
