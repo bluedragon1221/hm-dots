@@ -4,40 +4,41 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
-    nix-formatter-pack.url = "github:Gerschtli/nix-formatter-pack";
+    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    nix-formatter-pack,
-    ...
-  }: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    homeConfigurations.collin = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      modules = [
-        ./home.nix
+  outputs = {flake-parts, ...} @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = ["x86_64-linux"];
+      imports = [
+        inputs.treefmt-nix.flakeModule
       ];
-    };
 
-    formatter.${system} = nix-formatter-pack.lib.mkFormatter {
-      inherit nixpkgs;
-      system = "x86_64-linux";
-
-      config.tools = {
-        deadnix.enable = true;
-        alejandra.enable = true;
-        statix.enable = true;
+      flake = {
+        homeConfigurations.collin = inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+          modules = [
+            ./home.nix
+          ];
+        };
       };
 
-      extraModules = [];
-    };
+      perSystem = {
+        system,
+        pkgs,
+        ...
+      }: {
+        apps.default.program = inputs.home-manager.defaultPackage.${system};
 
-    # "nix run ." will run home-manager switch
-    defaultPackage.${system} = home-manager.defaultPackage.${system};
-  };
+        treefmt = {
+          package = pkgs.treefmt;
+          programs.alejandra.enable = true;
+          projectRootFile = "flake.nix";
+        };
+      };
+    };
 }
