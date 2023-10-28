@@ -7,16 +7,12 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     home-manager.url = "github:nix-community/home-manager";
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-
-    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
-      imports = [
-        inputs.treefmt-nix.flakeModule
-      ];
+      imports = [];
 
       flake = {
         homeConfigurations.collin = inputs.home-manager.lib.homeManagerConfiguration {
@@ -34,11 +30,7 @@
       }: {
         apps.default.program = inputs.home-manager.defaultPackage.${system};
 
-        treefmt = {
-          package = pkgs.treefmt;
-          programs.alejandra.enable = true;
-          projectRootFile = "flake.nix";
-        };
+        formatter = pkgs.alejandra;
       };
     };
 }
